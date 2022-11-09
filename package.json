@@ -1,0 +1,94 @@
+{
+  "name": "@cascadeplus/websocket-client",
+  "version": "1.0.0",
+  "description": "Websocket client built with ws for use in nestjs applications.",
+  "keywords": ["nestjs", "websocket", "client", "ws"],
+  "homepage": "https://github.com/cascadeplus/websocket-client#readme",
+  "bugs": {
+    "url" : "https://github.com/cascadeplus/websocket-client/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name" : "Cassidy Spring",
+    "email" : "79487947+cassiecascade@users.noreply.github.com",
+    "url" : "https://github.com/cassiecascade"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cascadeplus/websocket-client"
+  },
+  "engines": {
+    "node": "~18",
+    "npm": "~8"
+  },
+  "main": "src/index.ts",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "lint": "ts-standard | snazzy",
+    "lint:fix": "ts-standard --fix | snazzy",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "ws": "^8.9.0"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^9.2.0"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^9.0.0",
+    "@nestjs/schematics": "^9.0.0",
+    "@nestjs/testing": "^9.2.0",
+    "@types/jest": "28.1.4",
+    "@types/node": "^18.11.9",
+    "@types/ws": "^8.5.3",
+    "jest": "28.1.2",
+    "rimraf": "^3.0.2",
+    "snazzy": "^9.0.0",
+    "source-map-support": "^0.5.20",
+    "ts-jest": "28.0.5",
+    "ts-standard": "^12.0.1",
+    "tsconfig-paths": "4.1.0",
+    "typescript": "^4.3.5"
+  },
+  "ts-standard": {
+    "env": [
+      "jest"
+    ],
+    "ignore": [
+      "dist"
+    ]
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coveragePathIgnorePatterns": [
+      "index.ts",
+      ".module.ts",
+      "test"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}

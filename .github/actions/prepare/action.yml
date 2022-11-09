@@ -1,0 +1,14 @@
+name: prepare
+description: install dependencies
+
+runs:
+  using: 'composite'
+  steps:
+    - name: install node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: install dependencies
+      shell: bash
+      run: npm ci
